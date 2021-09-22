@@ -1,5 +1,11 @@
 package com.emse.spring.faircorp.hello;
 
-public interface GreetingService {
-    void greet(String name);
+import org.springframework.stereotype.Service;
+
+@Service
+public class ConsoleGreetingService implements GreetingService {
+    @Override
+    public void greet(String name) {
+
+    }
 }
