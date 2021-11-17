@@ -1,13 +1,17 @@
 package com.emse.spring.faircorp.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
+
 @Entity
 @Table(name = "HEATER")
 public class Heater {
 
+
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
 
     @Column(nullable = false)
     private String name;
@@ -15,6 +19,7 @@ public class Heater {
     @Column
     private Long power;
 
+    @JsonManagedReference
     @ManyToOne
     private Room room;
 
@@ -25,12 +30,46 @@ public class Heater {
     public Heater() {
     }
 
-    public Heater(long id, String name, Room room, HeaterStatus heaterStatus) {
-        this.id = id;
+    public Heater(String name, Room room, HeaterStatus heaterStatus) {
         this.name = name;
         this.room = room;
         this.heaterStatus = heaterStatus;
     }
 
+    public Long getId() {
+        return id;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public Long getPower() {
+        return power;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public HeaterStatus getHeaterStatus() {
+        return heaterStatus;
+    }
+
+    public void setHeaterStatus(HeaterStatus heaterStatus) {
+        this.heaterStatus = heaterStatus;
+    }
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPower(Long power) {
+        this.power = power;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
 }

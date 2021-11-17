@@ -8,9 +8,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class FaircorpApplicationConfig {
 
-    // (2)
+
     @Bean
-    public CommandLineRunner greetingCommandLine(GreetingService greetingService) { // (3)
+    public CommandLineRunner greetingCommandLine(GreetingService greetingService) {
 
         return new CommandLineRunner() {
             @Override
