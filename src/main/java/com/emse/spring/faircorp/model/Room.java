@@ -27,11 +27,11 @@ public class Room {
     @Column
     private Double targetTemperature;
 
-    @JsonBackReference
+    @JsonManagedReference
     @OneToMany(mappedBy = "room")
     private Set<Heater> heaters;
 
-    @JsonBackReference
+    @JsonManagedReference
     @OneToMany(mappedBy = "room")
     private Set<Window> windows;
 
@@ -39,7 +39,7 @@ public class Room {
         this.building = building;
     }
 
-    @JsonManagedReference
+    @JsonBackReference
     @ManyToOne
     private Building building;
 

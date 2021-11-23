@@ -1,6 +1,7 @@
 package com.emse.spring.faircorp.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -13,7 +14,7 @@ public class Building {
     @GeneratedValue
     private Long id;
 
-    @JsonBackReference
+    @JsonManagedReference
     @OneToMany(mappedBy = "building")
     private Set<Room> roomList;
 

@@ -60,8 +60,8 @@ public class BuildingController {
             heaterDao.deleteByRoom(roomId);
             windowDao.deleteByRoom(roomId);
             roomDao.deleteById(roomId);
-            buildingDao.deleteById(id);
         }
+        buildingDao.deleteById(id);
     }
 
 }

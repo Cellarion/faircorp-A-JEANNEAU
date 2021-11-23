@@ -1,7 +1,7 @@
 package com.emse.spring.faircorp.model;
 
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 
@@ -25,7 +25,7 @@ public class Window {
         this.room = room;
     }
 
-    @JsonManagedReference
+    @JsonBackReference
     @ManyToOne
     private Room room;
 

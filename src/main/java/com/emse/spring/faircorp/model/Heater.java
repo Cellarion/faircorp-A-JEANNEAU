@@ -1,6 +1,6 @@
 package com.emse.spring.faircorp.model;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 
@@ -19,7 +19,7 @@ public class Heater {
     @Column
     private Long power;
 
-    @JsonManagedReference
+    @JsonBackReference
     @ManyToOne
     private Room room;
 
