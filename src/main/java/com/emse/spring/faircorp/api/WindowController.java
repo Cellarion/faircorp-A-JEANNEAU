@@ -25,7 +25,7 @@ public class WindowController {
         this.roomDao = roomDao;
     }
 
-    @GetMapping
+    @GetMapping(windows)
     public List<WindowDto> findAll() {
         return windowDao.findAll().stream().map(WindowDto::new).collect(Collectors.toList());
     }
