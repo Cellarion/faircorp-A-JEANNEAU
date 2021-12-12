@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 
 @Transactional
 @RestController
+@CrossOrigin
 @RequestMapping("api/room")
 public class RoomController {
 
