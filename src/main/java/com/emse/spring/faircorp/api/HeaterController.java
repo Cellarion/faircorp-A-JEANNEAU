@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 
 @Transactional
 @RestController
+@CrossOrigin
 @RequestMapping("api/heater")
 public class HeaterController {
 
