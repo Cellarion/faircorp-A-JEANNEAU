@@ -36,6 +36,13 @@ public class Heater {
         this.heaterStatus = heaterStatus;
     }
 
+    public Heater(String name, Long power, Room room, HeaterStatus heaterStatus) {
+        this.name = name;
+        this.power = power;
+        this.room = room;
+        this.heaterStatus = heaterStatus;
+    }
+
     public Long getId() {
         return id;
     }
