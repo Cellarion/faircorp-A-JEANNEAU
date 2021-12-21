@@ -16,7 +16,7 @@ VALUES (-10, 'ON', 'Heater1', 2000, -10);
 INSERT INTO HEATER(id, heater_status, name, power, room_id)
 VALUES (-5, 'ON', 'Heater2', null, -10);
 INSERT INTO HEATER(id, heater_status, name, power, room_id)
-VALUES (-9, 'OFF', 'Heater2', 6000, -13);
+VALUES (-9, 'OFF', 'Heater Second', 6000, -13);
 
 INSERT INTO RWINDOW(id, window_status, name, room_id)
 VALUES (-10, 'CLOSED', 'Window 1', -10);
