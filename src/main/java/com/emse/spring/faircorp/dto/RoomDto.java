@@ -14,7 +14,9 @@ public class RoomDto {
     private Set<Heater> heaters;
     private Set<Window> windows;
     private Long buildingId;
+    private String buildingName;
     private String name;
+
 
     public Long getId() {
         return id;
@@ -32,6 +34,7 @@ public class RoomDto {
         this.windows = room.getWindows();
         this.heaters = room.getHeaters();
         this.buildingId = room.getBuilding().getId();
+        this.buildingName = room.getBuilding().getName();
     }
 
     public int getFloor() {
@@ -60,6 +63,10 @@ public class RoomDto {
 
     public Long getBuildingId() {
         return buildingId;
+    }
+
+    public String getBuildingName() {
+        return buildingName;
     }
 
 }
